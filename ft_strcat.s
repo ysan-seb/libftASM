@@ -5,7 +5,6 @@ section .text
 _ft_strcat:
     push    rbp
     mov     rbp, rsp
-    
     mov     rax, rdi
 
 .end_of_s1:
@@ -17,8 +16,8 @@ _ft_strcat:
 .concat:
     cmp     byte[rsi], 0
     je      .ret
-    mov     bl , [rsi]
-    mov     [rdi], bl
+    mov     rbx , [rsi]
+    mov     [rdi], rbx
     inc     rsi
     inc     rdi
     jmp     .concat
