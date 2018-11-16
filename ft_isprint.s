@@ -14,12 +14,12 @@ _ft_isprint:
 	jmp		.ret1
 
 .ret0:
-	mov rax, 0
+	mov 	rax, 0
 	leave
 	ret
 
 .ret1:
-	mov rax, 1
+	mov 	rax, 1
 	leave
 	ret
 

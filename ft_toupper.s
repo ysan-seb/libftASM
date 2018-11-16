@@ -5,9 +5,7 @@ section .text
 _ft_toupper:
     push    rbp
     mov     rbp, rsp
-
     mov     rax, rdi
-
     cmp     rdi, 97
     jl      .ret
     cmp     rdi, 122
