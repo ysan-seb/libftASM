@@ -1,31 +1,23 @@
-extern  malloc
+extern  _malloc
+extern  _ft_strlen
 
 section .data
 section .text
-    global  ft_strdup
+    global  _ft_strdup
 
-
-ft_strdup:
-    cmp     rdi, 0
-    je      .ret0
-
-    mov rcx, -1
-    mov rsi, rdi
-    mov al, 0
-    repne scasb
-    sub rdi, rsi
-    dec rdi
-
-    call malloc
-
-    mov     rcx, rdx
+_ft_strdup:
+	push	rbp
+	mov		rbp, rsp
+    push    rdi
+    call    _ft_strlen
+    inc     rax
+    push    rax
+    mov     rdi, rax
+    call    _malloc
+    mov     rdi, rax
+    pop     rcx
+    dec     rcx
+    pop     rsi
     rep     movsb
-    mov rax, rdi
-    jmp .ret1
-
-.ret0:
-    mov rax, 0
-    ret
-
-.ret1:
+    leave
     ret

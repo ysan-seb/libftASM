@@ -1,17 +1,16 @@
-#include <stdio.h>
-#include <string.h>
+#include <strings.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <fcntl.h>
 
-char                    *ft_strdup(const char *s1);
+char	*ft_strchr(char *str, int c);
 
-int                             main(int argc, char **argv)
+int				main(int argc, char **argv)
 {
-        int                     i;
-        char            *str;
+	char	*str = strdup("abcdefghjk");
 
-
-                        str = ft_strdup(argv[1]);
-                        printf("%s", str);
-                        free(str);
-        return (0);
+	printf("ret : %s\n", ft_strchr("42FileChecker", 0));
+	printf("ret : %s\n", ft_strchr(str, 'c'));
+	printf("ret : %s\n", ft_strchr(str, 'o'));
+	return (0);
 }

@@ -1,9 +1,8 @@
 section .data
 section .text
-	global ft_strlen
+	global _ft_strlen
 
-ft_strlen:
-
+_ft_strlen:
 	mov rcx, -1
     mov rsi, rdi ; backup rdi
 	cmp rsi, 0

@@ -1,11 +1,9 @@
 section .data
 section .text
-    global  ft_memcpy
+    global  _ft_memcpy
 
-ft_memcpy:
+_ft_memcpy:
     mov     rax, rdi
     mov     rcx, rdx
     rep     movsb
     ret
-
-;rdi rsi rdx

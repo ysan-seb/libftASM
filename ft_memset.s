@@ -1,10 +1,10 @@
 section .data
 section .text
-    global  ft_memset
+    global  _ft_memset
 
-ft_memset:
+_ft_memset:
     mov     r8, rdi
-    mov     rax, 0x41
+    mov     rax, rsi
     mov     rcx, rdx
     rep     stosb
     mov     rax, r8

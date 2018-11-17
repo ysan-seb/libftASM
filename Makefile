@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: maki <maki@student.42.fr>                  +#+  +:+       +#+         #
+#    By: ysan-seb <ysan-seb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 09:40:00 by ysan-seb          #+#    #+#              #
-#    Updated: 2018/11/16 23:55:26 by maki             ###   ########.fr        #
+#    Updated: 2018/11/17 19:51:07 by ysan-seb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,9 @@ SRC = 	ft_bzero.s \
 		ft_strlen.s \
 		ft_memset.s \
 		ft_memcpy.s \
-		ft_strdup.s
+		ft_strdup.s \
+		ft_cat.s \
+		ft_strchr.s
 
 OBJ = $(SRC:.s=.o)
 
@@ -42,7 +44,7 @@ $(NAME): $(OBJ)
 	@ranlib $(NAME)
 
 %.o: %.s
-	nasm -g -f Elf64 -o $@ $< 
+	nasm -g -f Macho64 -o $@ $< 
 
 clean:
 	@rm -rf $(OBJ)
