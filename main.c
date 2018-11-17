@@ -9,8 +9,6 @@ int				main(int argc, char **argv)
 {
 	char	*str = strdup("abcdefghjk");
 
-	printf("ret : %s\n", ft_strchr("42FileChecker", 0));
-	printf("ret : %s\n", ft_strchr(str, 'c'));
-	printf("ret : %s\n", ft_strchr(str, 'o'));
+	printf("ret : %d\n", ' ');
 	return (0);
 }

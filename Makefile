@@ -6,7 +6,7 @@
 #    By: ysan-seb <ysan-seb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 09:40:00 by ysan-seb          #+#    #+#              #
-#    Updated: 2018/11/17 19:51:07 by ysan-seb         ###   ########.fr        #
+#    Updated: 2018/11/17 23:53:33 by ysan-seb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,11 @@ SRC = 	ft_bzero.s \
 		ft_memcpy.s \
 		ft_strdup.s \
 		ft_cat.s \
-		ft_strchr.s
+		ft_strchr.s \
+		ft_memchr.s \
+		ft_isspace.s \
+		ft_isupper.s \
+		ft_islower.s
 
 OBJ = $(SRC:.s=.o)
 

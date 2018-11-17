@@ -1,10 +1,4 @@
-ft_isspace
-ft_isupper
-ft_islower
-
-strchr
 strcmp
 memalloc
 strrchr
 memcmp
-memchr
