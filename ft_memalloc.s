@@ -1,4 +1,4 @@
-extern	malloc
+extern	_malloc
 extern	_ft_memset
 
 section .data
@@ -11,7 +11,7 @@ _ft_memalloc:
 	push	rdi
 	cmp		rdi, 0
 	je		.ret0
-	call	malloc
+	call	_malloc
 	mov	rdi, rax
 	mov	rsi, 0
 	pop	rdx

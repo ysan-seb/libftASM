@@ -48,7 +48,7 @@ $(NAME): $(OBJ)
 	@ranlib $(NAME)
 
 %.o: %.s
-	nasm -g -f elf64 -o $@ $< 
+	nasm -g -f macho64 -o $@ $< 
 
 clean:
 	@rm -rf $(OBJ)
