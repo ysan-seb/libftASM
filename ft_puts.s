@@ -21,6 +21,7 @@ _ft_puts:
     mov     rax, MACH_SYSCALL(4)
     inc     rbx
     syscall
+    jc      .ret0
     jmp     .loop
 
 .ret:
@@ -29,5 +30,10 @@ _ft_puts:
     mov		rdx, 1
     mov     rax, MACH_SYSCALL(4)
     syscall
+    jc      .ret0
+    leave
+    ret
+
+.ret0:
     leave
     ret

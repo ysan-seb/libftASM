@@ -6,7 +6,7 @@
 #    By: ysan-seb <ysan-seb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 09:40:00 by ysan-seb          #+#    #+#              #
-#    Updated: 2018/11/17 23:53:33 by ysan-seb         ###   ########.fr        #
+#    Updated: 2018/11/18 16:55:13 by ysan-seb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,9 @@ SRC = 	ft_bzero.s \
 		ft_isspace.s \
 		ft_isupper.s \
 		ft_islower.s \
-		ft_memalloc.s
+		ft_memalloc.s \
+		ft_strequ.s
+
 OBJ = $(SRC:.s=.o)
 
 DIR_HEADER = -I./

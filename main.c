@@ -2,16 +2,29 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <fcntl.h>
+#include <unistd.h>
+#include <errno.h>
 
-void	*_ft_memalloc(size_t size);
+// EBADF
+
+int             ft_strequ(char const *s1, char const *s2);
 
 int				main(int argc, char **argv)
 {
-	char	*str = _ft_memalloc(0);
-	if (!str)
-		printf("NULL\n");
-	str = _ft_memalloc(16);
-	if (str)
-		printf("Heap\n");
-	return (0);
+	printf("%d\n", ft_strequ("tito", "toto"));
+
+	printf("%d\n", ft_strequ("toto", "toto"));
+
+	printf("%d\n", ft_strequ("hello world", "hello"));
+
+	printf("%d\n", ft_strequ("", ""));
+
+	printf("%d\n", ft_strequ(0, 0));
+
+	printf("%d\n", ft_strequ(0, ""));
+
+	printf("%d\n", ft_strequ("", 0));
+
+
+
 }
