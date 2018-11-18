@@ -35,8 +35,8 @@ SRC = 	ft_bzero.s \
 		ft_memchr.s \
 		ft_isspace.s \
 		ft_isupper.s \
-		ft_islower.s
-
+		ft_islower.s \
+		ft_memalloc.s
 OBJ = $(SRC:.s=.o)
 
 DIR_HEADER = -I./
@@ -48,7 +48,7 @@ $(NAME): $(OBJ)
 	@ranlib $(NAME)
 
 %.o: %.s
-	nasm -g -f Macho64 -o $@ $< 
+	nasm -g -f elf64 -o $@ $< 
 
 clean:
 	@rm -rf $(OBJ)
